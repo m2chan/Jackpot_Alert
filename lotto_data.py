@@ -1,10 +1,10 @@
 # Retrieves lotto data for Lotto Max and Lotto 649
 
-import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
+from datetime import datetime, date
 import ssl
 import time
-from datetime import datetime, date
+import urllib.request, urllib.parse, urllib.error
 
 def retrieve_data():
     '''
@@ -54,12 +54,4 @@ def retrieve_data():
 
 if __name__ == '__main__':
     print(retrieve_data())
-    # driver = webdriver.Chrome(ChromeDriverManager().install())
-
-
-'''
-Want to track the lotto name, the grand prize, max millions, draw date
-Output of this module is just the lotto data for today that we use to determine if we should be sending a notification to users
-Writes this data to a database
-'''
 
