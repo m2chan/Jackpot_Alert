@@ -1,14 +1,15 @@
 # Retrieves lotto data for Lotto Max and Lotto 649
 
+import urllib.request, urllib.parse, urllib.error
 from bs4 import BeautifulSoup
 from datetime import datetime, date
 import ssl
 import time
-import urllib.request, urllib.parse, urllib.error
+
 
 def retrieve_data():
     '''
-    Pulls the lotto data from given link
+    Uses Beautiful Soup to pull the lotto jackpot amount data
     '''
 
     # Set up SSL certs options
@@ -24,8 +25,7 @@ def retrieve_data():
     # Search scraped HTML for fields
     raw_date = soup.find_all('div', attrs={'class':'nextJackpotDateDate'})
     raw_jackpot = soup.find_all('div', attrs={'class':'nextJackpotPrizeAmount'})
-    raw_secondary_jackpot = soup.find_all('span', attrs={'class':'nextJackpotSecondaryPrize'})
-
+   
     # Initialize dict to store lottery information
     lottery_data = {'lotto_649':{}, 'lotto_max':{}}
 
@@ -39,17 +39,12 @@ def retrieve_data():
         lotto_month = datetime.strptime(lotto_month,'%B').month
         lotto_day = int(lotto_raw_date[1].split()[1])
         lotto_year = int(lotto_raw_date[2])
-
-        # Clean jackpot input - Sometimes there are special characters in the secondary jackpot scrame
-        lotto_raw_secondary_jackpot = raw_secondary_jackpot[index].text
-        lotto_clean_secondary_jackpot = ''.join(e for e in lotto_raw_secondary_jackpot if e.isalnum()) 
-        
+ 
         # Fill in lottery_data dictionary for current lottery
         lottery_data[lotto]['day_of_week'] = lotto_day_of_week
         lottery_data[lotto]['date'] = date(lotto_year, lotto_month, lotto_day)
         lottery_data[lotto]['jackpot'] = raw_jackpot[index].text
-        lottery_data[lotto]['secondary_jackpot'] = lotto_clean_secondary_jackpot
-
+        
     return lottery_data
 
 if __name__ == '__main__':
