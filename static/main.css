@@ -1,4 +1,51 @@
-<style>
+h1 {
+    padding-top: 30px;
+    padding-left: 47px;
+    color: #fff1d0;
+}
+
+h2 {
+    padding-bottom: 5px;
+    color: #379683;
+}    
+
+h5 {
+    padding-top: 30px;
+    padding-left: 47px;
+    padding-right: 47px;
+    color: #fff1d0;
+}
+
+.success-center {
+    margin: auto;
+    width: 68%;
+    position: absolute;
+    left: 65%;
+    top: 500%;
+}
+
+.sidenav {
+    height: 100%;
+    width: 350px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #379683;
+    overflow-x: hidden;
+    padding-top: 20px;
+} 
+
+.contact-me {
+    margin-top: 100px;
+    padding-left: 47px;
+    padding-right: 47px;
+    color: #fff1d0;
+}
+
+.col-md-8 {
+    padding-top: 50px;
+}
 
 .center {
     margin: auto;
@@ -6,12 +53,6 @@
     position: absolute;
     left: 59%;
     top: 10%;
-}
-
-h2 {
-    /* padding-top: 5px; */
-    padding-bottom: 5px;
-    color: #379683;
 }
 
 .description {
@@ -63,5 +104,3 @@ h2 {
     font-size: 1.2rem;
 }
 
-
-</style>
