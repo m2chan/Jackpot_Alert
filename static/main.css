@@ -1,0 +1,67 @@
+<style>
+
+.center {
+    margin: auto;
+    width: 80%;
+    position: absolute;
+    left: 59%;
+    top: 10%;
+}
+
+h2 {
+    /* padding-top: 5px; */
+    padding-bottom: 5px;
+    color: #379683;
+}
+
+.description {
+    padding-bottom: 5px;
+}
+
+.form-group {
+    padding-top: 10px;
+    font-size: 1.2rem;
+}
+
+.form-control-label-step-one {
+    padding-left: 20px;
+}
+
+.logo-lotto-max {
+    margin-left: 5px;
+}
+
+.form-control-label-lotto-max {
+    margin-left: 5px;
+}
+
+.form-check {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.form-check-label {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.form-check-input {
+    width: 1.2rem;
+    height: 1.2rem;
+    padding-right: 1rem;
+    margin-right: 1rem;
+    padding-left: 6rem;
+}
+
+.text-muted {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.btn {
+    font-size: 1.2rem;
+}
+
+
+</style>
