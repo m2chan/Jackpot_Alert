@@ -79,8 +79,7 @@ if __name__ == '__main__':
         sub_1 = ('name1@email.com', '4162003000', 1, 5, 1, 30, 1)
         sub_2 = ('name2@email.com', '4161002000', 1, 10, 1, 50, 1)
 =======
-        sub_1 = ('marco.chan30@gmail.com', '4162001611', 1, 1, 1, 1, 1)
->>>>>>> Stashed changes
+
 
         create_subscriber(conn, sub_1)
         # create_subscriber(conn, sub_2)
