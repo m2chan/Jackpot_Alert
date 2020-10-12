@@ -12,7 +12,6 @@ import sys
 import config
 
 def send_sms(phone_number, body_message, my_phone_number):
-	# TODO: Figure out how to properly store the tokens
 	'''
 	Calls the Twilio API to send a text message to the subscriber
 	
@@ -31,7 +30,7 @@ def send_sms(phone_number, body_message, my_phone_number):
 	message = client.messages \
 				.create(
 					 body=body_message,
-					 from_='+14154495848',
+					 from_=my_phone_number,
 					 to=phone_number
 				 )
 
@@ -73,7 +72,6 @@ def send_email(receiver_email, body_message, email_password):
 def lotto_649_query(conn, jackpot):
 	'''
 	uery subscribers who want to receive Lotto 64/9 notifications for jackpots at or below this week's jackpot
-
 	Input arguments:
 		conn: Database connection object
 		jackpot: The jackpot amount coming up
@@ -96,7 +94,6 @@ def lotto_649_query(conn, jackpot):
 def lotto_max_query(conn, jackpot):
 	'''
 	Query subscribers who want to receive Lotto Max notifications for jackpots at or below this week's jackpot
-
 	Input arguments:
 		conn: Database connection object
 		jackpot: The jackpot amount coming up
