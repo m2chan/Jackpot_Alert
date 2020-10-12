@@ -72,8 +72,8 @@ def main():
         create_table(conn, sql_create_subscribers_table)
     
     with conn:
-        sub_1 = ('mchan1994@hotmail.com', '4162001611', 1, 5, 1, 30, 1)
-        sub_2 = ('mchan1994@hotmail.com', '4162001611', 1, 10, 1, 50, 1)
+        sub_1 = ('name1@email.com', '4162003000', 1, 5, 1, 30, 1)
+        sub_2 = ('name2@email.com', '4161002000', 1, 10, 1, 50, 1)
 
         create_subscriber(conn, sub_1)
         create_subscriber(conn, sub_2)
