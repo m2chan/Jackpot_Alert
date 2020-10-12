@@ -75,12 +75,10 @@ if __name__ == '__main__':
         create_table(conn, sql_create_subscribers_table)
     
     with conn:
-<<<<<<< Updated upstream
+
         sub_1 = ('name1@email.com', '4162003000', 1, 5, 1, 30, 1)
         sub_2 = ('name2@email.com', '4161002000', 1, 10, 1, 50, 1)
-=======
-
 
         create_subscriber(conn, sub_1)
-        # create_subscriber(conn, sub_2)
+        create_subscriber(conn, sub_2)
 
