@@ -1,0 +1,175 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+    <style>
+
+        .center {
+            margin: auto;
+            width: 80%;
+            position: absolute;
+            left: 59%;
+            top: 10%;
+        }
+        
+        h2 {
+            padding-bottom: 5px;
+            color: #379683;
+        }
+
+        .description {
+            padding-bottom: 5px;
+        }
+
+        .form-group {
+            padding-top: 10px;
+            font-size: 1.2rem;
+        }
+
+        .form-control-label-step-one {
+            padding-left: 20px;
+        }
+
+        .logo-lotto-max {
+            margin-left: 5px;
+        }
+
+        .form-control-label-lotto-max {
+            margin-left: 5px;
+        }
+
+        .form-check {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .form-check-label {
+            padding-left: 10px;
+            padding-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .form-check-input {
+            width: 1.2rem;
+            height: 1.2rem;
+            padding-right: 1rem;
+            margin-right: 1rem;
+            padding-left: 6rem;
+        }
+
+        .text-muted {
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+        }
+
+        .btn {
+            font-size: 1.2rem;
+        }
+
+        
+    </style>
+
+    
+    <div class="center">
+        <div class="content-section" style = "margin-top: 50px;">
+            <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <div class="step">
+                <h2>Step 1</h2>       
+                <h6>Choose the lotteries that you want to follow and we'll notify you when the jackpot exceeds your threshold</h6>
+                <h6 class="border-bottom description">If you would like to skip a lottery, just enter 0</h6>
+
+                <fieldset class="form-group">
+                    <div class="form-group">
+                        
+                        <img class="logo-lotto-649" src="static/lotto_649.png" width="55" height="55">
+                        {{ form.lotto_649_threshold.label(class="form-control-label-lotto-649") }}
+                        <div style="margin-top: 5px">
+                            {% if form.lotto_649_threshold.errors %}
+                            {{ form.lotto_649_threshold(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.lotto_649_threshold.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                                {{ form.lotto_649_threshold(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <small class="text-muted">
+                            Lotto 6/49 jackpots are typically between $5-10 Million
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <img class="logo-lotto-max" src="static/lotto_max.png" width="46" height="46">
+                        {{ form.lotto_max_threshold.label(class="form-control-label-lotto-max") }}
+                        <div style="margin-top: 10px">
+                            {% if form.lotto_max_threshold.errors %}
+                            {{ form.lotto_max_threshold(class="form-control form-control-lg is-invalid") }}
+                            <div class="invalid-feedback">
+                                {% for error in form.lotto_max_threshold.errors %}
+                                    <span>{{ error }}</span>
+                                {% endfor %}
+                            </div>
+                            {% else %}
+                                {{ form.lotto_max_threshold(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <small class="text-muted">
+                            Lotto Max jackpots are typically between $30-50 Million
+                        </small>
+                    </div>
+            </div>
+    
+            <div class='step'>
+                <h2>Step 2</h2>
+                <h6 class="border-bottom description">Choose how you want to be notified</h6>
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {% if form.email.errors %}
+                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.email.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.email(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+    
+                <div class="form-group">
+                    {{ form.phone.label(class="form-control-label") }}
+                    {% if form.phone.errors %}
+                        {{ form.phone(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.phone.errors %}
+                                <span>{{ error }}</span>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        {{ form.phone(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </div>
+    
+            <div class='step' style="margin-top: 30px;">
+                <h2>Step 3</h2>
+                <h6 class="border-bottom description">I'll let you use my crystal ball.. for free &#x1F52E;</h6>
+                <div class="form-check">
+                    {{ form.lucky_number_bool(class="form-check-input") }}
+                    {{ form.lucky_number_bool.label(class="form-check-label") }}
+                </div>
+            </div>
+                </fieldset>
+                <div class="form-group" >
+                    {{ form.submit(class="btn btn-primary btn-lg active") }}
+                </div>
+            </form>
+            
+            <small class="text-muted" style="padding-bottom: 20px;">
+                Jackpot Alert is an independent project and is not affliated with any gaming commission or organization. To opt out of notifications, please click "Unsubscribe" at the bottom of your notification email or reply "STOP" to text messages. Alternatively, you can get in touch by clicking the "Contact" button.
+            </small>
+        </div>
+    </div>
+    
+{% endblock content %}

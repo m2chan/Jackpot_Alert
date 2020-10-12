@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <style>
+    .sidenav {
+      height: 100%;
+      width: 350px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #379683;
+      overflow-x: hidden;
+      padding-top: 20px;
+      } 
+
+      h1 {
+        padding-top: 30px;
+        padding-left: 47px;
+        color: #fff1d0;
+      }
+
+      h5 {
+        padding-top: 30px;
+        padding-left: 47px;
+        padding-right: 47px;
+        color: #fff1d0;
+      }
+      .contact-me {
+        margin-top: 100px;
+        padding-left: 47px;
+        padding-right: 47px;
+        color: #fff1d0;
+      }
+
+      .col-md-8 {
+        padding-top: 50px;
+      }
+  </style>
+
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="static/money-bag_1f4b0.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="static/money-bag_1f4b0.png" sizes="32x32">
+
+    <!-- <link rel="stylesheet" type="text/css" href="static/main.css"> -->
+
+    <title>Jackpot Alert</title>
+  </head>
+  <body>
+
+    <div class="sidenav">
+      <h1>Jackpot Alert</h1>
+      <h5>Never miss another big jackpot again!</h5 >
+      <h5 style="padding-top: 15px;">Simply complete the form and we'll send you an email or text the next time a Lotto 6/49 or a Lotto Max jackpot exceeds your jackpot threshold.</h5>
+      <h5 style="padding-top: 15px;">Please play responsibly, and good luck!  &#x1F340;</h5>
+      <a href="mailto:jackpot.alert.notification@gmail.com">
+        <h6 class="contact-me"  style="padding-top: 2px;">Contact</h6>
+      </a>
+    </div>
+    
+    <main role="main" class="container">
+        <div class="row">
+          <div class="col-md-8">
+            {% block content %}{% endblock %}
+          </div>
+        </div>
+      </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
