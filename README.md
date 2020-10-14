@@ -46,7 +46,7 @@ Back-end:
 * Text notifications are generated using Twilio's API
 * Emails sent using Python's `smtplib` library
 * SQLite database
-* BeautifulSoup for scraping latest lottery jackpots and details
+* Beautiful Soup for scraping latest lottery jackpots and details
 
 Project currently just runs locally, but I am looking at options for deployment in the future.
 
