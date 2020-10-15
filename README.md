@@ -38,8 +38,10 @@ And voila, that's it!
 
 ## Technical details
 
+This project was built primarily using Python.
+
 Front-end:
-* Flask (in particular Flask's WTForms for user input)
+* Flask and WTForms for user input
 * Bootstrap for styling
 
 Back-end:
@@ -50,6 +52,6 @@ Back-end:
 
 Project currently just runs locally, but I am looking at options for deployment in the future.
 
-#### Thanks for checking my project! :wave:
+#### Thanks for checking out my project! :wave:
 
 
